@@ -1,21 +1,20 @@
 server:
-  port: 8082
-
+  port: 8081
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/security_demo?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
+    url: jdbc:mysql://localhost:3306/demo?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
     username: root
-    password: root
+    password: root123456
     driver-class-name: com.mysql.jdbc.Driver
-    druid:
-      initialSize: 1
-      minIdle: 1
-      maxActive: 50
-      maxWait: 6000
-      timeBetweenEvictionRunsMillis: 6000
-      minEvictableIdleTimeMillis: 30000
-      testWhileIdle: true
-      testOnBorrow: true
-      testOnReturn: true
-      validationQuery: SELECT 1 from dual
-      connectionProperties: config.decrypt=false
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+
+#management:
+#  health:
+#    mail:
+#      enabled: false #意思是邮件发送不是核心功能，所以它从健康检查中排出，避免造成他挂机了导致整个服务不可用。
+#  endpoint:
+#    web:
+#      exposure: "health" #默认级别为info,health,beans,env。选择暴露，不暴露include换成exlcude即可
+#    health:
+#      show-details: always #详细信息显示给所有用户。级别还有never级别不显示，when-authorized，指得是详细信息给特别用户。
