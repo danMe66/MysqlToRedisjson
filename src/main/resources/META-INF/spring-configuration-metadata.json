@@ -1,0 +1,28 @@
+{
+  "groups": [],
+  "hints": [],
+  "properties": [
+    {
+      "name": "student.name",
+      "type": "java.lang.String",
+      "description": "username"
+    },
+    {
+      "name": "student.password",
+      "type": "java.lang.String",
+      "description": "password"
+    },
+    {
+      "name": "student.host",
+      "type": "java.lang.String",
+      "defaultValue": "localhost",
+      "description": "hostname"
+    },
+    {
+      "name": "student.port",
+      "type": "java.lang.Integer",
+      "defaultValue": "8080",
+      "description": "port"
+    }
+  ]
+}

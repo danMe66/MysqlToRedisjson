@@ -9,12 +9,27 @@ spring:
 mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml
 
-#management:
-#  health:
-#    mail:
-#      enabled: false #意思是邮件发送不是核心功能，所以它从健康检查中排出，避免造成他挂机了导致整个服务不可用。
-#  endpoint:
-#    web:
-#      exposure: "health" #默认级别为info,health,beans,env。选择暴露，不暴露include换成exlcude即可
-#    health:
-#      show-details: always #详细信息显示给所有用户。级别还有never级别不显示，when-authorized，指得是详细信息给特别用户。
+## 配置文件给实体注入值
+#student:
+#  name: zs
+#  age: 23
+#  sex: true
+#  birthday: 2020/10/1
+#  location: {province: 湖北,city: 武汉, zone: 洪山}
+#  hobbies: [足球, 篮球]
+#  skills: [编程, 金融]
+#  pet:
+#    nickName: wc
+#    strain: hsq
+#person:
+#  lastName: Mary
+#  age: 16
+#  birthDate: 2004/01/01
+#  maps: {one:1,two:2,three:3}
+#  lists:
+#    - 1
+#    - 2
+#    - 3
+#  pet:
+#    name: wangcai
+#    age: 3

@@ -1,0 +1,4 @@
+nohup java -jar -Xbootclasspath/a:$toolspath/tools.jar:$toolspath/rt.jar:$toolspath/jce.jar XXXX.jar
+
+
+要加上 -Xbootclasspath/a:$toolspath/tools.jar  这个启动参数来支持，因为Java编译器是通过JavaFileManager来加载相关依赖类的，而JavaFileManager来自tools.jar，所以不加会无法编译哦。
